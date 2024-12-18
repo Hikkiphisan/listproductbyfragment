@@ -10,6 +10,12 @@ public class ProductService_have_image implements IProductService_have_Image {
 
     public ProductService_have_image() {
         productHaveImages = new ArrayList<>();
+
+        productHaveImages.add(new Product_have_Image(1, "Product 1", "Description for product 1", "product1.jpg"));
+        productHaveImages.add(new Product_have_Image(2, "Product 2", "Description for product 2", "product2.jpg"));
+        productHaveImages.add(new Product_have_Image(3, "Product 3", "Description for product 3", "product3.jpg"));
+
+
     }
 
     @Override
