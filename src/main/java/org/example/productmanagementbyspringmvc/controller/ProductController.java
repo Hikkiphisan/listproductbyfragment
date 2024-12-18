@@ -1,5 +1,6 @@
 package org.example.productmanagementbyspringmvc.controller;
 import org.example.productmanagementbyspringmvc.model.Product;
+import org.example.productmanagementbyspringmvc.model.Product_have_Image;
 import org.example.productmanagementbyspringmvc.service.IProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

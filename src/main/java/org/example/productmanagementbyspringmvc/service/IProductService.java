@@ -1,6 +1,7 @@
 package org.example.productmanagementbyspringmvc.service;
 
 import org.example.productmanagementbyspringmvc.model.Product;
+import org.example.productmanagementbyspringmvc.model.Product_have_Image;
 
 import java.util.List;
 
