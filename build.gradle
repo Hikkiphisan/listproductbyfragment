@@ -30,6 +30,7 @@ dependencies {
     // Đây là một Thymeleaf Dialect, cho phép sử dụng các thẻ bổ sung để hỗ trợ tạo layout trong Thymeleaf.
     implementation group: 'nz.net.ultraq.thymeleaf', name: 'thymeleaf-layout-dialect', version: '3.1.0'
 
+    implementation 'org.springframework:spring-webmvc:5.3.30'
 
     testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")

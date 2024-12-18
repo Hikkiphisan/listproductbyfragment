@@ -6,9 +6,10 @@
 <body>
 <h1>Product Form</h1>
 <form th:action="@{/products}" th:object="${product}" method="post">
+<!--    đoan này đang bind-->
     <input type="hidden" th:field="*{id}" />
     <label>Name: </label>
-    <input type="text" th:field="*{name}" /><br>
+    <input type="text" th:value="*{name}" /><br>
     <label>Price: </label>
     <input type="number" th:field="*{price}" /><br>
     <label>Description: </label>
