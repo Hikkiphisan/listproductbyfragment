@@ -2,8 +2,9 @@ package org.example.productmanagementbyspringmvc.configuration;
 
 
 //import org.example.customermanagementthymeleaf.service.CustomerService;
-import org.example.productmanagementbyspringmvc.service.IProductService;
-import org.example.productmanagementbyspringmvc.service.ProductService;
+import org.example.productmanagementbyspringmvc.service.HibernateCustomerService;
+import org.example.productmanagementbyspringmvc.thungrac.IProductService;
+import org.example.productmanagementbyspringmvc.thungrac.ProductService;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.ApplicationContext;
@@ -78,6 +79,11 @@ public class AppConfiguration implements WebMvcConfigurer, ApplicationContextAwa
             return new ProductService();
         }
 
+    @Bean
+    public HibernateCustomerService hibernateCustomerService() {
+        return new HibernateCustomerService();
+    }
+
 
 
 //    @Override
@@ -91,21 +97,21 @@ public class AppConfiguration implements WebMvcConfigurer, ApplicationContextAwa
 //        registry.addResourceHandler("/images/**") //chạy đương dẫn nay thi anh xa den thu mục
 //                .addResourceLocations("D:/images");
 //    }
-
-    @Value("${file-upload}")
-    private String upload;
-    @Override
-    public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler("/i/**")
-                .addResourceLocations("file:" + upload);
-        System.out.println(upload);
-    }
-
-
-    @Bean(name = "multipartResolver")
-    public CommonsMultipartResolver getResolver() {
-        CommonsMultipartResolver resolver = new CommonsMultipartResolver();
-        resolver.setMaxUploadSizePerFile(52428800);
-        return resolver;
-    }
+//
+//    @Value("${file-upload}")
+//    private String upload;
+//    @Override
+//    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+//        registry.addResourceHandler("/i/**")
+//                .addResourceLocations("file:" + upload);
+//        System.out.println(upload);
+//    }
+//
+//
+//    @Bean(name = "multipartResolver")
+//    public CommonsMultipartResolver getResolver() {
+//        CommonsMultipartResolver resolver = new CommonsMultipartResolver();
+//        resolver.setMaxUploadSizePerFile(52428800);
+//        return resolver;
+//    }
 }

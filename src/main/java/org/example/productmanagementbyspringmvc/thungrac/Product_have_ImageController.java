@@ -1,9 +1,5 @@
-package org.example.productmanagementbyspringmvc.controller;
+package org.example.productmanagementbyspringmvc.thungrac;
 
-import org.example.productmanagementbyspringmvc.model.ProductForm_have_Image;
-import org.example.productmanagementbyspringmvc.model.Product_have_Image;
-import org.example.productmanagementbyspringmvc.service.IProductService_have_Image;
-import org.example.productmanagementbyspringmvc.service.ProductService_have_image;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,17 +7,10 @@ import org.springframework.util.FileCopyUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.io.File;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.nio.file.StandardCopyOption;
-import java.util.Arrays;
 import java.util.List;
-import java.util.UUID;
 
 @Controller
 @RequestMapping("/producthaveImages")
@@ -36,12 +25,12 @@ public class Product_have_ImageController {
     public String index(Model model) {
         List<Product_have_Image> productshaveImages = productServiceHaveImage.findAll();
         model.addAttribute("productshaveImages", productshaveImages);
-        return "index_have_images";
+        return "product_have_image/index_have_images";
     }
 
     @GetMapping("/create")
     public ModelAndView showCreateForm() {
-        ModelAndView modelAndView = new ModelAndView("/create_have_images");
+        ModelAndView modelAndView = new ModelAndView("product_have_image/create_have_images");
         modelAndView.addObject("productForm", new ProductForm_have_Image());
         return modelAndView;
     }

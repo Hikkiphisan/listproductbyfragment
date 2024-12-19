@@ -1,4 +1,4 @@
-package org.example.productmanagementbyspringmvc.model;
+package org.example.productmanagementbyspringmvc.thungrac;
 
 import org.springframework.web.multipart.MultipartFile;
 

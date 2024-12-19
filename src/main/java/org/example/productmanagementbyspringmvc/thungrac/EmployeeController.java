@@ -1,6 +1,5 @@
-package org.example.productmanagementbyspringmvc.controller;
+package org.example.productmanagementbyspringmvc.thungrac;
 
-import org.example.productmanagementbyspringmvc.model.Employee;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;

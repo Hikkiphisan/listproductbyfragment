@@ -1,4 +1,4 @@
-package org.example.productmanagementbyspringmvc.model;
+package org.example.productmanagementbyspringmvc.thungrac;
 
 
 public class Product_have_Image {

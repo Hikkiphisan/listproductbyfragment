@@ -1,4 +1,4 @@
-package org.example.productmanagementbyspringmvc.model;
+package org.example.productmanagementbyspringmvc.thungrac;
 
 public class Employee {
     private String id;

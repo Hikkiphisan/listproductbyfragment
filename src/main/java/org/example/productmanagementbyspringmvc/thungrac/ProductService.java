@@ -1,7 +1,5 @@
-package org.example.productmanagementbyspringmvc.service;
+package org.example.productmanagementbyspringmvc.thungrac;
 
-import org.example.productmanagementbyspringmvc.model.Product;
-import org.example.productmanagementbyspringmvc.model.Product_have_Image;
 import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
