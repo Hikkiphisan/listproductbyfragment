@@ -5,6 +5,7 @@ package org.example.productmanagementbyspringmvc.configuration;
 import org.example.productmanagementbyspringmvc.service.IProductService;
 import org.example.productmanagementbyspringmvc.service.ProductService;
 import org.springframework.beans.BeansException;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.context.annotation.Bean;
@@ -79,16 +80,25 @@ public class AppConfiguration implements WebMvcConfigurer, ApplicationContextAwa
 
 
 
+//    @Override
+//    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+//        registry.addResourceHandler("/css/**")
+//                .addResourceLocations("/WEB-INF/css/");
+//
+//        registry.addResourceHandler("/js/**")
+//                .addResourceLocations("/WEB-INF/js/");
+//
+//        registry.addResourceHandler("/images/**") //chạy đương dẫn nay thi anh xa den thu mục
+//                .addResourceLocations("D:/images");
+//    }
+
+    @Value("${file-upload}")
+    private String upload;
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler("/css/**")
-                .addResourceLocations("/WEB-INF/css/");
-
-        registry.addResourceHandler("/js/**")
-                .addResourceLocations("/WEB-INF/js/");
-
-        registry.addResourceHandler("/images/**")
-                .addResourceLocations("/WEB-INF/images/");
+        registry.addResourceHandler("/i/**")
+                .addResourceLocations("file:" + upload);
+        System.out.println(upload);
     }
 
 

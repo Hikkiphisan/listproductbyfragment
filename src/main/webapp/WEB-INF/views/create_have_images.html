@@ -6,12 +6,12 @@
 <body>
 <h3>Add Product</h3>
 <p>
-    <a th:href="@{/product}">
+    <a th:href="@{/producthaveImages}">
         Back to product list
     </a>
 </p>
 <div id="form">
-    <form th:action="@{/product/save}" th:object="${productForm}"
+    <form th:action="@{/producthaveImages/save}" th:object="${productForm}"
           method="POST" novalidate="novalidate" enctype="multipart/form-data">
         <input type="hidden" th:field="*{id}"/>
         <table>

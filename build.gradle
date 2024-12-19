@@ -36,7 +36,7 @@ dependencies {
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
 
     implementation group: 'commons-fileupload', name: 'commons-fileupload', version: '1.4'
-
+    implementation group: 'org.hibernate', name: 'hibernate-core', version: '5.6.10.Final'
 }
 
 test {
